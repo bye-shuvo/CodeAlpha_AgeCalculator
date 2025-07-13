@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+header>h1{
+  text-align: center;
+  font-family: "Changa One", sans-serif;
+  font-size: 4rem;
+  font-weight: normal;
+}
+
+#main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#inputForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#ageInput {
+  all: unset;
+  font-size: 1.1rem;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#inputForm > h2 {
+  margin-bottom: 1rem;
+}
+
+#dmySection {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#month,
+#day,
+#year {
+  height: 4rem;
+  width: 15rem;
+  display: flex;
+  align-items:center;
+  justify-content: space-evenly;
+  position: relative;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background: white;
+}
+
+#dayInput,
+#monthInput,
+#yearInput {
+  all: unset;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid gray;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.invalid{
+  border-color: red !important;
+}
+
+#dayInput:focus , #monthInput:focus , #yearInput:focus {
+  border-color: rgb(0, 166, 255);
+}
+
+#dayInput:focus~#day-label , #monthInput:focus~label , #yearInput:focus~#year-label{
+  color: rgb(0, 166, 255);
+}
+
+/* for crome and other webkit browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#monthLabel,
+#dayLabel,
+#yearLabel {
+  position: absolute;
+  top: -22%;
+  left: 15%;
+  padding: 0 8px 0 8px;
+  background: inherit ;
+  z-index: 2;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.invalid-label{
+  color: red !important;
+}
+
+.validate{
+  font-size: 0.75rem;
+  color: red;
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  padding: 2px 0;
+  background: rgba(255, 0, 0, 0.278);
+  width: 100%;
+  transition: all 0.2s ease-in-out 0s;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  opacity: 0;
+  transform: translateY(-100%);
+  z-index: 6;
+}
+
+.show-validation{
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.caret-toggler {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 10%;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.rotate-caret-down{
+  transform: rotate(180deg);
+}
+
+#monthNames {
+  position: absolute;
+  top: 100%;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  height: 18rem;
+  width: fit-content;
+  box-shadow: 0px 2px 10px 1px;
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 10;
+}
+
+#monthNames > li {
+  font-size: 1.3rem;
+  height: 3rem;
+  width: 11rem;
+  text-align: center;
+  display: grid;
+  place-content: center;
+}
+
+#monthNames > li:hover {
+  background: rgba(98, 127, 136, 0.435);
+}
+
+.monthNames-open {
+  opacity: 1;
+  transform: translateY(1%);
+  pointer-events: all;
+}
+
+.monthNames-close {
+  opacity: 0;
+  transform: translateY(-15%);
+  pointer-events: none;
+}
+
+#calculationBtn {
+  all: unset;
+  padding: 15px 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 2px black;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#calculationBtn:hover{
+  background: rgba(0, 170, 255, 0.35);
+}
+
+#calculationBtn:active{
+  box-shadow: 2px 2px 1px 2px black;
+  background: rgba(0, 170, 255, 0.582);
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: 20%;
+}
+
+#result{
+  display: flex;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.error{
+  color: red !important;
+}

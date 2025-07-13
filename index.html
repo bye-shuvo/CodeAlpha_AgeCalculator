@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hello,welcome ! Calculate your age very easily with our mordern age Calculator . Just enter your date of birth and get your age easily."
+    />
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body id="age-calculator">
+    <header>
+      <h1>Age Calculator</h1>
+    </header>
+    <main id="main-section">
+      <form id="inputForm">
+        <h2>Enter your Birth Date</h2>
+        <div id="dmySection">
+          <div id="month">
+            <input type="button" id="monthInput" name="month" />
+            <label for="monthInput" id="monthLabel">Month</label>
+            <svg
+              class="caret-toggler"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+            >
+              <path
+                d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l256 0c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"
+              />
+            </svg>
+            <ul id="monthNames" class="monthNames-close"></ul>
+          </div>
+          <div id="day">
+            <p id="dayValidator" class="validate hide"></p>
+            <input
+              type="number"
+              name="day"
+              id="dayInput"
+              placeholder="Enter Day"
+            />
+            <label for="dayInput" id="dayLabel">Day</label>
+          </div>
+          <div id="year">
+            <p id="yearValidator" class="validate hide"></p>
+            <input
+              type="number"
+              name="year"
+              id="yearInput"
+              placeholder="Enter Year"
+            />
+            <label for="yearInput" id="yearLabel">Year</label>
+          </div>
+        </div>
+        <button id="calculationBtn" type="submit">Calculate</button>
+      </form>
+    </main>
+    <footer><span id="result"></span></footer>
+  </body>
+</html>
