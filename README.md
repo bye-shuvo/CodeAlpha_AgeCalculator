@@ -20,7 +20,7 @@ A simple and interactive web application to calculate your exact age in years, m
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/CodeAlpha_AgeCalculator.git
+git clone https://github.com/bye_shuvo/CodeAlpha_AgeCalculator.git
 cd CodeAlpha_AgeCalculator
 ```
 
